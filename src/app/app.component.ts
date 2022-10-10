@@ -48,7 +48,8 @@ export class AppComponent implements OnInit{
 
       {name: "SOP", type: LessonType.wyklad, where: 209, when: "1,5,9,11", day: DayType.Piatek, length: 2, start: 2},
       {name: "SOP", type: LessonType.cwiczenia, where: 209, when: "2,4-14", day: DayType.Piatek, length: 2, start: 4},
-      {name: "PP", type: LessonType.cwiczenia, where: 213, when: "2,4-14", day: DayType.Piatek, length: 2, start: 6},
+      {name: "PP", type: LessonType.cwiczenia, where: 213, when: "2,5,9,11", day: DayType.Piatek, length: 2, start: 6},
+      {name: "PP", type: LessonType.cwiczenia, where: 213, when: "4,6,7,8,10,12", day: DayType.Piatek, length: 2, start: 2},
       {name: "His", type: LessonType.wyklad, where: 105, when: "2,5,9,11", day: DayType.Piatek, length: 2, start: 8 },
     ];
 
