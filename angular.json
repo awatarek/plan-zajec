@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "06c994c6-325c-4ddb-812c-b3ba81cb4fa7"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,10 +34,6 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
-              "node_modules/@fullcalendar/common/main.css",
-              "node_modules/@fullcalendar/daygrid/main.css",
-              "node_modules/@fullcalendar/timegrid/main.css",
-              "node_modules/@fullcalendar/list/main.css",
               "src/styles.scss"
             ],
             "scripts": []

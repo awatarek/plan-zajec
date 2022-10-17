@@ -1,1 +1,19 @@
-<p>time-table works!</p>
+Tydzień: <input type="number" [(ngModel)]="choosenWeek">
+<br>
+<br>
+<table>
+    <tr>
+        <th style="width: 6rem"></th>
+        <th>Pon</th>
+        <th>Wt</th>
+        <th>Śr</th>
+        <th>Cz</th>
+        <th>Pią</th>
+    </tr>
+    <tr *ngFor="let item of possibleHours">
+        <th>{{item.start}} - {{item.end}}</th>
+        <td *ngFor="let i of posibleDate">
+            <app-time-table-cell [event]="getEvent(i, item.index)" *ngIf="getEvent(i,item.index)"></app-time-table-cell>
+        </td>
+    </tr>
+</table>
