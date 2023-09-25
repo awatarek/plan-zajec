@@ -10,13 +10,13 @@ export class TimeTableComponent implements OnInit {
   @Input()
   public events: LessonData[] = [];
   public possibleHours: any[] = [];
-  public posibleDate: any[] = [];
+  public posibleDate: any[] = [0,1,2,3,4];
   public choosenWeek: number = 1;
 
   constructor() { }
 
   ngOnInit(): void {
-    let startDay = new Date("2022-10-03");
+    let startDay = new Date("2023-10-02");
     let endDay = new Date();
 
     let time = endDay.getTime() - startDay.getTime();
@@ -34,9 +34,8 @@ export class TimeTableComponent implements OnInit {
       {start: "14:20", end: "15:05", index: 8},
       {start: "15:15", end: "16:00", index: 9},
       {start: "16:15", end: "17:00", index: 10},
+      {start: "17:05", end: "17:50", index: 11},
     ]
-
-    this.posibleDate = [0,1,2,3,4];
   }
 
   public getEvent(dateNumber, hoursNumber){

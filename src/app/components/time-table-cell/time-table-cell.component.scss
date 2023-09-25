@@ -1,10 +1,13 @@
 .card{
     height: 100%;
     width: 100%;
+    min-width: 150px;
 
     border: 1px solid gainsboro;
+    color: white;
     border-radius: 5px;
     margin: auto;
+    padding: 2px;
 
     background-color: gainsboro;
 }

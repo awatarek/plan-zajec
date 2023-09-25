@@ -1,16 +1,20 @@
 table{
-    width: 95%;
-    height: 95%;
+    min-width: 950px;
+    width: auto;
+    max-width: 95%;
+    max-height: 95%;
     margin: auto;
-    border: 1px solid gray;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    font-weight: bold;
     border-collapse: collapse;
 
     tr, td, th{
-        border: 1px solid rgb(173, 173, 173);
+        border: 1px solid rgb(255, 255, 255);
     }
 
     td{
-        min-height: 70px;
+        min-height: 75px;
         min-width: 25px;
     }
 
