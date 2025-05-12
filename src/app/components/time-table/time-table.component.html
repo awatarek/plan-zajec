@@ -1,4 +1,5 @@
-Tydzień: <input type="number" [(ngModel)]="choosenWeek">
+Tydzień: <input type="number" [(ngModel)]="choosenWeek"><br>
+Zmiana następuje automatycznie w piatek o 16:15
 <br>
 <br>
 <table>
@@ -7,13 +8,18 @@ Tydzień: <input type="number" [(ngModel)]="choosenWeek">
         <th>Pon</th>
         <th>Wt</th>
         <th>Śr</th>
-        <th>Cz</th>
         <th>Pią</th>
     </tr>
-    <tr *ngFor="let item of possibleHours">
-        <th>{{item.start}} - {{item.end}}</th>
-        <td *ngFor="let i of posibleDate">
-            <app-time-table-cell [event]="getEvent(i, item.index)" *ngIf="getEvent(i,item.index)"></app-time-table-cell>
-        </td>
-    </tr>
+    <ng-container *ngFor="let item of possibleHours">
+        <tr *ngIf="hasEventsForRow(item.index)">
+            <th>{{item.index}}: {{item.start}} - {{item.end}}</th>
+            <td *ngFor="let i of posibleDate">
+                <app-time-table-cell [event]="getEvent(i, item.index)" *ngIf="getEvent(i,item.index)"></app-time-table-cell>
+            </td>
+        </tr>
+        <tr *ngIf="!hasEventsForRow(item.index)">
+            <th>{{item.start}} - {{item.end}}</th>
+        </tr>
+    </ng-container>
+
 </table>
